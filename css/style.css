@@ -1,0 +1,97 @@
+/* Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 150px 30px 1fr 30px;
+    grid-template-areas: 
+    "header header"
+    "navbar navbar"
+    "sidebar main"
+    "footer footer";
+}
+
+/* header */
+
+header {
+    /* background-color: lightblue; */
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid red;
+}
+
+#medaillon {
+    height: 150px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+header video {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+
+header h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: #02083d;
+    text-align: center;
+    font-size: 48px;
+    margin-right: 60px;
+}
+
+.navbar {
+    background-color: lightcoral;
+    position: sticky;
+    top: 0;
+    grid-area: navbar;
+}
+
+.sidebar {
+    background-color: lightgreen;
+    overflow-y: scroll;
+    position: sticky;
+    top: 30px;
+    grid-area: sidebar;
+    height: calc(100vh - 30px);
+    padding-bottom: 150px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightpink;
+    text-align: center;
+}
+
+main {
+    background-color: lightcoral;
+    grid-area: main;
+}
+
+.content {
+    background-color: lightseagreen;
+    padding: 20px;
+    
+}
+
+p {
+    max-width: 600px;
+}
+
