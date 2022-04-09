@@ -15,7 +15,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 220px 1fr;
-    grid-template-rows: 150px 30px 1fr 30px;
+    grid-template-rows: 200px 30px 1fr 30px;
     grid-template-areas: 
     "header header"
     "navbar navbar"
@@ -31,11 +31,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #medaillon {
-    height: 150px;
+    height: 170px;
     border-radius: 50%;
     padding: 10px;
 }
@@ -51,7 +51,8 @@ header video {
 
 header h1 {
     font-family: 'Permanent Marker', cursive;
-    color: #02083d;
+    color: yellow;
+    letter-spacing: 2px;
     text-align: center;
     font-size: 48px;
     margin-right: 60px;
@@ -71,7 +72,7 @@ header h1 {
     top: 30px;
     grid-area: sidebar;
     height: calc(100vh - 30px);
-    padding-bottom: 150px;
+    padding-bottom: 220px;
 }
 
 footer {
@@ -95,3 +96,27 @@ p {
     max-width: 600px;
 }
 
+@media screen and (max-width: 681px){
+    /* .container {
+        grid-template-areas:
+        "" ;
+    } */
+    header h1 {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 453px){
+    .sidebar {
+        display: none;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar, footer {
+        height: 30px;
+    }
+
+}
