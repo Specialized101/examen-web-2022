@@ -101,7 +101,7 @@ p {
         grid-template-areas:
         "" ;
     } */
-    header h1 {
+    header h1 { 
         font-size: 36px;
     }
 }
