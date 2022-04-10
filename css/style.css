@@ -1,8 +1,8 @@
-/* Import */
+/* FONT IMPORTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-/* Reset */
+/* RESET CSS */
 
 * {
     box-sizing: border-box;
@@ -11,19 +11,22 @@
     /* border: 1px solid red; */
 }
 
+html {
+    background-color: #111;
+}
 .container {
     height: 100%;
     display: grid;
     grid-template-columns: 220px 1fr;
-    grid-template-rows: 200px 30px 1fr 30px;
+    grid-template-rows: 200px 32px 1fr 30px;
     grid-template-areas: 
     "header header"
     "navbar navbar"
-    "sidebar main"
+    "main main"
     "footer footer";
 }
 
-/* header */
+/* START OF HEADER */
 
 header {
     /* background-color: lightblue; */
@@ -32,6 +35,8 @@ header {
     align-items: center;
     justify-content: space-between;
     /* border: 2px solid red; */
+    position: relative;
+    overflow: hidden;
 }
 
 #medaillon {
@@ -41,13 +46,14 @@ header {
 }
 
 header video {
-    width: 100%;
+    max-width: 100%;
     position: absolute;
+    background-size:cover;
     top: 0;
     left: 0;
     z-index: -1;
-    
 }
+
 
 header h1 {
     font-family: 'Permanent Marker', cursive;
@@ -58,65 +64,177 @@ header h1 {
     margin-right: 60px;
 }
 
+/* END OF HEADER */
+/*
+/* ******************************************************************* */
+/*
+/* START OF NAVIGATION BAR */
+
 .navbar {
-    background-color: lightcoral;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #111;
     position: sticky;
     top: 0;
     grid-area: navbar;
 }
 
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-right: 32px;
+    /* border: 1px solid yellow; */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #818181;
+    font-size: 24px;
+    /* border: 1px solid red; */
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+
+.hamburger-icon {
+    cursor: pointer;
+    margin-left: 15px;
+    position: absolute;
+    left: 0;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 4px);
+    transform: rotate(-45deg) translate(-9px, 4px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -6px);
+    transform: rotate(45deg) translate(-8px, -4px);
+  }
+
+
+/* END OF NAVIGATION BAR */
+/*
+/* ******************************************************************* */
+/*
+/* START OF SIDEBAR NAVIGATION */
+
 .sidebar {
-    background-color: lightgreen;
+    /* background-color: lightgreen;
     overflow-y: scroll;
     position: sticky;
     top: 30px;
     grid-area: sidebar;
     height: calc(100vh - 30px);
-    padding-bottom: 220px;
+    padding-bottom: 220px; */
+
+    display: none;
+  grid-area: sidebar;
+  flex-shrink: 0;
+  width: 220px;
+  height: calc(100vh - 30px);
+  position: sticky;
+  z-index: 1;
+  top: 32px;
+  left: 0;
+  background-color: #111;
+  overflow-y: scroll;
 }
+
+.sidebar ul {
+    list-style-type: none;
+    padding-bottom: 200px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* END OF SIDEBAR NAVIGATION */
+/* ******************************************************************* */
 
 footer {
     grid-area: footer;
     background-color: lightpink;
     text-align: center;
+    
 }
 
 main {
     background-color: lightcoral;
     grid-area: main;
+    display: flex;
+    /* border: 1px solid red; */
 }
 
 .content {
     background-color: lightseagreen;
     padding: 20px;
-    
+    width: 100%;
 }
 
 p {
     max-width: 600px;
 }
 
-@media screen and (max-width: 681px){
-    /* .container {
-        grid-template-areas:
-        "" ;
-    } */
-    header h1 { 
+@media screen and (max-width: 900px){
+    .nav-links {
+        gap: 24px;
+    }
+    
+    .nav-links a{
+        font-size: 20px;
+    }
+    
+    header h1 {
         font-size: 36px;
     }
+
 }
 
-@media screen and (max-width: 453px){
-    .sidebar {
+@media screen and (max-width: 474px) {
+
+    .container {
+        grid-template-rows: 32px 1fr 30px;
+        grid-template-areas:
+        "navbar navbar"
+        "main main"
+        "footer footer" ;
+    }
+
+    header {
         display: none;
     }
-    .container {
-        display: flex;
-        flex-direction: column;
+
+    .nav-links {
+        gap: 12px;
+        padding-right: 6px;
     }
 
-    .navbar, footer {
-        height: 30px;
+    .nav-links a {
+        font-size: 18px;
     }
-
 }
