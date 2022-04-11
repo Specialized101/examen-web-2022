@@ -11,4 +11,4 @@ function darkmode(){
     }
 }
 
-window.onload = darkmode;
+window.onload = darkmode; 

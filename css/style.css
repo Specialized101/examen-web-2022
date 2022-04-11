@@ -53,10 +53,11 @@ header {
     height: 170px;
     border-radius: 50%;
     padding: 10px;
+    
 }
 
 header video {
-    max-width: 100%;
+    /* width: 100%; */
     position: absolute;
     background-size:cover;
     top: 0;
@@ -66,12 +67,16 @@ header video {
 
 
 header h1 {
-    font-family: 'Permanent Marker', cursive;
-    color: gold;
-    letter-spacing: 2px;
+    /* font-family: 'Permanent Marker', cursive; */
+    color: #fff;
+    letter-spacing: 1px;
     text-align: center;
     font-size: 48px;
     margin-right: 60px;
+    background-color: #222;
+    padding: 5px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px white;
 }
 
 /* END OF HEADER */
@@ -263,7 +268,7 @@ p {
 
 }
 
-@media screen and (max-width: 474px) {
+@media screen and (max-width: 523px) {
 
     .container {
         grid-template-rows: 32px 1fr 30px;
@@ -277,20 +282,26 @@ p {
         display: none;
     }
 
-    .nav-links {
-        padding-right: 0px;
-    }
-
     .nav-links a {
         font-size: 18px;
+        margin-top: 4px;
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 420px){
     
+    #icon {
+        margin-right: 6px;
+    }
+
+    .nav-links{
+        margin-right: 4px;
+    }
 
     .nav-links a {
-        font-size: 15px;
+        font-size: 14px;
+        padding: 2px 4px;
+        margin-top: 8px;
     }
 
 }
