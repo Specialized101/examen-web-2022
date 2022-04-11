@@ -1,7 +1,7 @@
 /* FONT IMPORTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
 /* RESET CSS */
 
 * {
@@ -11,8 +11,18 @@
     /* border: 1px solid red; */
 }
 
-html {
-    background-color: #111;
+:root {
+    --content-bg-clr: #e1e1e1;
+    --content-txt-clr: #000;
+}
+
+.dark-theme {
+    --content-bg-clr: #222;
+    --content-txt-clr: #e1e1e1;
+}
+
+body {
+    font-family: 'Red Hat Mono', monospace;
 }
 .container {
     height: 100%;
@@ -57,7 +67,7 @@ header video {
 
 header h1 {
     font-family: 'Permanent Marker', cursive;
-    color: yellow;
+    color: gold;
     letter-spacing: 2px;
     text-align: center;
     font-size: 48px;
@@ -80,23 +90,46 @@ header h1 {
 }
 
 .nav-links {
-    list-style-type: none;
     display: flex;
-    align-items: center;
-    gap: 32px;
+    list-style-type: none;
+    /* gap: 28px; */
     padding-right: 32px;
     /* border: 1px solid yellow; */
 }
 
+.nav-links li {
+    display: flex;
+    align-items: center;
+
+    /* border: 1px solid red; */
+}
+
+.nav-links li:hover {
+    background-color:rgb(38, 38, 38);
+}
+
 .nav-links a {
+    height: 100%;
+    padding: 2px 18px;
+    /* border: 1px solid red; */
     text-decoration: none;
-    color: #818181;
-    font-size: 24px;
+    color: #a1a1a1;
+    font-size: 22px;
+    font-weight: 800;
     /* border: 1px solid red; */
 }
 
 .navbar a:hover {
     color: white;
+}
+
+
+#icon {
+    position: absolute;
+    top: 2px;
+    width: 26px;
+    cursor: pointer;
+    margin-right: 12px;
 }
 
 
@@ -110,7 +143,7 @@ header h1 {
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: white;
+    background-color: #a1a1a1;
     margin: 4px 0;
     transition: 0.4s;
   }
@@ -125,6 +158,18 @@ header h1 {
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -6px);
     transform: rotate(45deg) translate(-8px, -4px);
+  }
+
+  .courses-list {
+      display: none;
+      position: absolute;
+      top: 32px;
+      background-color: #111;
+      box-shadow: 0px 0px 4px #ccc;
+  }
+
+ nav > ul li:hover .courses-list{
+      display: block;
   }
 
 
@@ -142,7 +187,7 @@ header h1 {
     grid-area: sidebar;
     height: calc(100vh - 30px);
     padding-bottom: 220px; */
-
+    
     display: none;
   grid-area: sidebar;
   flex-shrink: 0;
@@ -159,39 +204,44 @@ header h1 {
 .sidebar ul {
     list-style-type: none;
     padding-bottom: 200px;
+    
 }
 
 .sidebar a {
     padding: 8px 8px 8px 10px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 22px;
+  font-weight: 800;
   color: #818181;
   display: block;
 }
 
 .sidebar a:hover {
     color: #f1f1f1;
+    background-color: rgb(38, 38, 38);
 }
 
 /* END OF SIDEBAR NAVIGATION */
 /* ******************************************************************* */
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: footer;
-    background-color: lightpink;
-    text-align: center;
-    
+    background-color: #111;
+    color: white;
 }
 
 main {
-    background-color: lightcoral;
     grid-area: main;
     display: flex;
     /* border: 1px solid red; */
 }
 
 .content {
-    background-color: lightseagreen;
+    background-color: var(--content-bg-clr);
+    color: var(--content-txt-clr);
     padding: 20px;
     width: 100%;
 }
@@ -201,12 +251,10 @@ p {
 }
 
 @media screen and (max-width: 900px){
-    .nav-links {
-        gap: 24px;
-    }
     
     .nav-links a{
         font-size: 20px;
+        padding: 2px 12px;
     }
     
     header h1 {
@@ -230,8 +278,7 @@ p {
     }
 
     .nav-links {
-        gap: 12px;
-        padding-right: 6px;
+        padding-right: 0px;
     }
 
     .nav-links a {
@@ -240,9 +287,7 @@ p {
 }
 
 @media screen and (max-width: 375px){
-    .nav-links{
-        gap: 10px;
-    }
+    
 
     .nav-links a {
         font-size: 15px;
