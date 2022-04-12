@@ -27,6 +27,7 @@ function darkmode(){
             localStorage.setItem("theme", "light");
         }
     }
+
 }
 
 window.onload = darkmode; 
