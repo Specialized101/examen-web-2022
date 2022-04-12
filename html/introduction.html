@@ -48,11 +48,11 @@
         <main>
             <nav id="sidebar" class="sidebar">
                 <ul>
-                    <li><a href="#">FIRST LINK</a></li>
-                    <li><a href="#intro">Introduction</a></li>
-                    <li><a href="#t1">Task 1</a></li>
-                    <li><a href="#t2">Task 2</a></li>
-                    <li><a href="#t3">Task 3</a></li>
+                    <li><a href="#test">FIRST LINK</a></li>
+                    <li><a href="#intro" onclick="toggle('intro')">Introduction</a></li>
+                    <li><a href="#t1" onclick="toggle('t1')">Task 1</a></li>
+                    <li><a href="#t2" onclick="toggle('t2')">Task 2</a></li>
+                    <li><a href="#t3" onclick="toggle('t3')">Task 3</a></li>
                     <li><a href="#">LINK</a></li>
                     <li><a href="#">LINK</a></li>
                     <li><a href="#">LINK</a></li>
@@ -93,9 +93,9 @@
                 </ul>
             </nav>
             <section class="content">
-                <details open id="intro" class="top">
-                    <summary>Introduction</summary>
-                    <p>This is the Introduction</p>
+                <details class="top">
+                    <summary id="intro">Introduction</summary>
+                    <p >This is the Introduction</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
@@ -108,20 +108,20 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
                 </details>
                 
-                <details id="t1" class="top">
-                    <summary>Task 1</summary>
+                <details  class="top">
+                    <summary id="t1"> Task 1</summary>
                     <p>Welcome to task 1</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
                 </details>
             
-                <details id="t2" class="top">
-                    <summary>Task 2</summary>
+                <details class="top">
+                    <summary id="t2" >Task 2</summary>
                     <p>Welcome to task 2</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
                 </details>
             
-                <details id="t3" class="top">
-                    <summary>Task 3</summary>
+                <details class="top">
+                    <summary id="t3">Task 3</summary>
                     <p>Welcome to task 3</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
                 </details>
@@ -167,6 +167,11 @@
             toggleSidebar();
         }
 
+        function toggle(item){
+            document.getElementById(item).click();
+        }
+
     </script>
+
 </body>
 </html>
