@@ -19,7 +19,7 @@
             <h1>Learn CyberSecurity From Scratch</h1>
         </header>
         <nav class="navbar">
-            <div id="hamburger-icon" onclick="changeIcon(this)">
+            <div id="hamburger-icon" onclick="changeIcon()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -124,8 +124,8 @@
 
     <script>
 
-        function changeIcon(x) {
-            x.classList.toggle("change");
+        function changeIcon() {
+            document.getElementById("hamburger-icon").classList.toggle("change");
             
             var leftPos = document.getElementById("hamburger-icon").style.left;
 
@@ -139,7 +139,10 @@
 
         function toggle(item){
             document.getElementById(item).click();
+            
+            changeIcon();
             closeSide();
+            
         }
 
         function openSide(){

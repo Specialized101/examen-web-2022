@@ -17,15 +17,20 @@
 }
 
 .dark-theme {
-    --content-bg-clr: #222;
+    --content-bg-clr: #1d2a35;
     --content-txt-clr: #e1e1e1;
 }
 
+
+html {
+    scroll-padding-top: 48px;
+}
 
 body {
     font-family: 'Red Hat Mono', monospace;
 }
 .container {
+   
     min-height: 100vh;
     display: grid;
     grid-template-columns: 220px 1fr;
@@ -74,7 +79,7 @@ header h1 {
     text-align: center;
     font-size: 48px;
     margin-right: 60px;
-    background-color: #222;
+    background-color: #15202b;
     padding: 5px 25px;
     border-radius: 20px;
     box-shadow: 0 0 4px white;
@@ -89,7 +94,7 @@ header h1 {
 .navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #111;
+    background-color: #0d1721;
     position: sticky;
     top: 0;
     grid-area: navbar;
@@ -99,7 +104,7 @@ header h1 {
     display: flex;
     list-style-type: none;
     /* gap: 28px; */
-    padding-right: 32px;
+    padding-right: 50px;
     /* border: 1px solid yellow; */
 }
 
@@ -111,7 +116,7 @@ header h1 {
 }
 
 .nav-links li:hover {
-    background-color:rgb(38, 38, 38);
+    background-color:#38444d;
 }
 
 .nav-links a {
@@ -119,7 +124,7 @@ header h1 {
     padding: 2px 18px;
     /* border: 1px solid red; */
     text-decoration: none;
-    color: #a1a1a1;
+    color: #f1f1f1;
     font-size: 22px;
     font-weight: 800;
     /* border: 1px solid red; */
@@ -150,7 +155,7 @@ header h1 {
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #a1a1a1;
+    background-color: #f1f1f1;
     margin: 4px 0;
     transition: .7s;
   }
@@ -158,20 +163,25 @@ header h1 {
   .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 4px);
     transform: rotate(-45deg) translate(-9px, 4px);
+    background-color: goldenrod;
   }
   
-  .change .bar2 {opacity: 0;}
+  .change .bar2 {
+      opacity: 0;
+      background-color: goldenrod;
+}
   
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -6px);
     transform: rotate(45deg) translate(-8px, -4px);
+    background-color: goldenrod;
   }
 
   .courses-list {
       display: none;
       position: absolute;
       top: 32px;
-      background-color: #111;
+      background-color: #0d1721;
       box-shadow: 0px 0px 4px #ccc;
   }
 
@@ -201,7 +211,7 @@ header h1 {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #15202b;
     overflow-y: scroll;
     transition: .5s;
 }
@@ -217,13 +227,12 @@ header h1 {
   text-decoration: none;
   font-size: 22px;
   font-weight: 800;
-  color: #818181;
+  color: #ccc;
   display: block;
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
-    background-color: rgb(38, 38, 38);
+    background-color:#38444d;
 }
 
 /* END OF SIDEBAR NAVIGATION */
@@ -234,7 +243,7 @@ footer {
     justify-content: center;
     align-items: center;
     grid-area: footer;
-    background-color: #111;
+    background-color: #0d1721;
     color: white;
 }
 
@@ -252,7 +261,6 @@ details {
     border-radius: 4px;
     padding: .5em .5em 0;
     transition: all .5s ease;
-    scroll-margin-top: 25%;
 }
 
 summary {
@@ -267,8 +275,9 @@ details[open] {
 }
 
 .content {
+    
     margin: 0 auto;
-    padding: 2em;
+    /* padding: 2em; */
     background-color: var(--content-bg-clr);
     color: var(--content-txt-clr);
     width: 100%;
@@ -292,6 +301,14 @@ details[open] {
         font-size: 36px;
     }
 
+    #hamburger-icon {
+        background-color: #0d1721;
+    }
+
+    details {
+        width: 90%;
+    }
+
 }
 
 @media screen and (max-width: 523px) {
@@ -311,6 +328,10 @@ details[open] {
     .nav-links a {
         font-size: 18px;
         margin-top: 4px;
+    }
+
+    details {
+        width: 95%;
     }
 }
 
