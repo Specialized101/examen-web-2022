@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NETWORK</title>
+    <title>INTRODUCTION</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../javascript/darkmode.js"></script>
 </head>
@@ -19,7 +19,7 @@
             <h1>Learn CyberSecurity From Scratch</h1>
         </header>
         <nav class="navbar">
-            <div class="hamburger-icon" onclick="changeIcon(this)">
+            <div id="hamburger-icon" onclick="openSide()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -45,15 +45,18 @@
 
         </nav>
         
+        <nav id="sidebar" class="sidebar">
+            <ul>
+                <li><a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a></li>
+                <li><a href="#intro" onclick="toggle('intro')">Introduction</a></li>
+                <li><a href="#t1" onclick="toggle('t1')">Task 1</a></li>
+                <li><a href="#t2" onclick="toggle('t2')">Task 2</a></li>
+                <li><a href="#t3" onclick="toggle('t3')">Task 3</a></li>
+            </ul>
+        </nav>
+
         <main>
-            <nav id="sidebar" class="sidebar">
-                <ul>
-                    <li><a href="#intro" onclick="toggle('intro')">Network</a></li>
-                    <li><a href="#t1" onclick="toggle('t1')">Task 1</a></li>
-                    <li><a href="#t2" onclick="toggle('t2')">Task 2</a></li>
-                    <li><a href="#t3" onclick="toggle('t3')">Task 3</a></li>
-                </ul>
-            </nav>
+            
             <section class="content">
                 <details class="top">
                     <summary id="intro">Network</summary>
@@ -76,6 +79,23 @@
                 <details class="top">
                     <summary id="t3">Task 3</summary>
                     <p>Welcome to task 3</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
                 </details>
         <!-- <br><br><br><br><br><br><br><br><br>
@@ -104,24 +124,33 @@
     </script>
 
     <script>
-        function toggleSidebar() {
-            var x = document.getElementById("sidebar");
-            var xdisplay = getComputedStyle(x, null).display;
-
-            if (xdisplay == "none"){
-                x.style.display = "block";
-            } else {
-                x.style.display = "none"
-            }
-        }
 
         function changeIcon(x) {
             x.classList.toggle("change");
-            toggleSidebar();
+            
+            // var leftPos = document.getElementById("hamburger-icon").style.left;
+
+            // if (leftPos == '0px' || leftPos == ''){
+            //     openSide();
+            // } else {
+            //     closeSide();
+            // }
+            
         }
 
         function toggle(item){
             document.getElementById(item).click();
+            closeSide();
+        }
+
+        function openSide(){
+            document.getElementById("sidebar").style.width = "220px";
+            // document.getElementById("hamburger-icon").style.left = "220px";
+        }
+
+        function closeSide(){
+            document.getElementById("sidebar").style.width = "0";
+            // document.getElementById("hamburger-icon").style.left = "0";
         }
 
     </script>

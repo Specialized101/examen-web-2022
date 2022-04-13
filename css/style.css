@@ -139,11 +139,12 @@ header h1 {
 }
 
 
-.hamburger-icon {
+#hamburger-icon {
     cursor: pointer;
     margin-left: 15px;
     position: absolute;
     left: 0;
+    transition: .5s;
 }
 
 .bar1, .bar2, .bar3 {
@@ -151,7 +152,7 @@ header h1 {
     height: 5px;
     background-color: #a1a1a1;
     margin: 4px 0;
-    transition: 0.4s;
+    transition: .7s;
   }
   
   .change .bar1 {
@@ -193,18 +194,16 @@ header h1 {
     grid-area: sidebar;
     height: calc(100vh - 30px);
     padding-bottom: 220px; */
-    
-    display: none;
-  grid-area: sidebar;
-  flex-shrink: 0;
-  width: 220px;
-  height: calc(100vh - 30px);
-  position: sticky;
-  z-index: 1;
-  top: 32px;
-  left: 0;
-  background-color: #111;
-  overflow-y: scroll;
+
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-y: scroll;
+    transition: .5s;
 }
 
 .sidebar ul {
