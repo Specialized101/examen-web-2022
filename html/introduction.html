@@ -45,17 +45,17 @@
 
         </nav>
         
-        <nav id="sidebar" class="sidebar">
-            <ul>
-                <li><a href="#intro" onclick="toggle('intro')">Introduction</a></li>
-                <li><a href="#t1" onclick="toggle('t1')">Task 1</a></li>
-                <li><a href="#t2" onclick="toggle('t2')">Task 2</a></li>
-                <li><a href="#t3" onclick="toggle('t3')">Task 3</a></li>
-            </ul>
-        </nav>
-
         <main>
-            
+        
+            <nav id="sidebar" class="sidebar">
+                <ul>
+                    <li><a href="#intro" onclick="toggle('intro')">Introduction</a></li>
+                    <li><a href="#t1" onclick="toggle('t1')">Task 1</a></li>
+                    <li><a href="#t2" onclick="toggle('t2')">Task 2</a></li>
+                    <li><a href="#t3" onclick="toggle('t3')">Task 3</a></li>
+                </ul>
+            </nav>
+
             <section class="content">
                 <details class="top">
                     <summary id="intro">Introduction</summary>
@@ -127,9 +127,9 @@
         function changeIcon() {
             document.getElementById("hamburger-icon").classList.toggle("change");
             
-            var leftPos = document.getElementById("hamburger-icon").style.left;
+            var widthSide = document.getElementById("sidebar").style.width;
 
-            if (leftPos == '0px' || leftPos == ''){
+            if (widthSide == '0px' || widthSide == ''){
                 openSide();
             } else {
                 closeSide();
@@ -147,12 +147,10 @@
 
         function openSide(){
             document.getElementById("sidebar").style.width = "220px";
-            document.getElementById("hamburger-icon").style.left = "220px";
         }
 
         function closeSide(){
             document.getElementById("sidebar").style.width = "0";
-            document.getElementById("hamburger-icon").style.left = "0";
         }
 
     </script>
