@@ -1,10 +1,14 @@
+/* Table of Content */
+
+
 /* FONT IMPORTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+
 /* RESET CSS */
 
-* {
+*{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -30,8 +34,6 @@ body {
     font-family: 'Red Hat Mono', monospace;
 }
 .container {
-   
-    min-height: 100vh;
     display: grid;
     grid-template-columns: 220px 1fr;
     grid-template-rows: 200px 32px 1fr 30px;
@@ -85,9 +87,9 @@ header h1 {
 }
 
 /* END OF HEADER */
-/*
 /* ******************************************************************* */
 /*
+/* ******************************************************************* */
 /* START OF NAVIGATION BAR */
 
 .navbar {
@@ -132,7 +134,7 @@ header h1 {
 }
 
 .navbar a:hover {
-    color: white;
+    color: #fac570;
 }
 
 
@@ -164,18 +166,15 @@ header h1 {
   .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 4px);
     transform: rotate(-45deg) translate(-9px, 4px);
-    background-color: goldenrod;
   }
   
   .change .bar2 {
       opacity: 0;
-      background-color: goldenrod;
 }
   
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -6px);
     transform: rotate(45deg) translate(-8px, -4px);
-    background-color: goldenrod;
   }
 
   .courses-list {
@@ -192,10 +191,8 @@ header h1 {
 
 
 /* END OF NAVIGATION BAR */
-/*
 /* ******************************************************************* */
 /*
-
 /* ******************************************************************* */
 /* START OF MAIN */
 
@@ -239,10 +236,11 @@ main {
 
 .sidebar a:hover {
     background-color:#38444d;
+    color: #fac570;
 }
 
 /* END OF SIDEBAR NAVIGATION */
-/* START OF MAIN CONTENT */
+/* START OF CONTENT */
 .content {
     
     /* margin: 0 auto; */
@@ -255,9 +253,25 @@ main {
     /* margin: 1em auto; */
 }
 
-details p {
+.learning-path {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #38444d;
+    margin-bottom: 40px;
+}
+
+.learning-path h2 {
+    display: inline;
+    font-size: 2.5rem;
+}
+
+.learning-path img {
+    width: 120px;
+}
+
+.learning-path p {
     max-width: 60ch;
-    /* margin: 0 auto; */
 }
 
 details {
@@ -269,18 +283,44 @@ details {
     transition: all .3s ease;
 }
 
+details[open] {
+    padding: .5em;
+}
+
+details h3 {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+details p {
+    max-width: 60ch;
+    /* margin: 0 auto; */
+}
+
+details img {
+    display: block;
+    max-width: 50%;
+    margin-left: .5em;
+}
+
 summary {
     font-weight: bold;
     margin: -.5em -.5em 0;
     padding: .5em;
     color: #fac570;
     background-color: #0d1721;
+    cursor: pointer;
 }
 
-details[open] {
-    padding: .5em;
-}
 
+/* END OF CONTENT */
+
+/* END OF MAIN */
+/* ******************************************************************* */
+/*
+/* ******************************************************************* */
+/* START OF FOOTER */
 footer {
     display: flex;
     justify-content: center;
@@ -290,15 +330,11 @@ footer {
     color: white;
 }
 
-
-
-
-
-
-
-/* p {
-    max-width: 600px;
-} */
+/* END OF FOOTER */
+/* ******************************************************************* */
+/*
+/* ******************************************************************* */
+/* START OF MEDIA QUERIES */
 
 @media screen and (max-width: 900px){
     
@@ -368,6 +404,7 @@ footer {
 
 }
 
+/* END OF MEDIA QUERIES */
 
 /* ******************************** */
 
