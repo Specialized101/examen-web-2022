@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INTRODUCTION</title>
+    <title>Network Fundamentals</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../javascript/darkmode.js"></script>
 </head>
@@ -19,7 +19,7 @@
             <h1>Learn CyberSecurity From Scratch</h1>
         </header>
         <nav class="navbar">
-            <div id="hamburger-icon" onclick="openSide()">
+            <div id="hamburger-icon" onclick="changeIcon()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -45,68 +45,115 @@
 
         </nav>
         
-        
-
         <main>
+        
             <nav id="sidebar" class="sidebar">
-                <ul>
-                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a></li>
-                    <li><a href="#intro" onclick="toggle('intro')">Introduction</a></li>
-                    <li><a href="#t1" onclick="toggle('t1')">Task 1</a></li>
-                    <li><a href="#t2" onclick="toggle('t2')">Task 2</a></li>
-                    <li><a href="#t3" onclick="toggle('t3')">Task 3</a></li>
+                <ul id="side-list">
+                    <li><a href="#t1" onclick="toggle('t1')">1. What is Networking ?</a></li>
+                    <li><a href="#t2" onclick="toggle('t2')">2. What is the Internet ?</a></li>
+                    <li><a href="#t3" onclick="toggle('t3')">3. Devices on a Network</a></li>
+                    <li><a href="#t4" onclick="toggle('t4')">4. LAN Technologies</a></li>
+                    <li><a href="#t5" onclick="toggle('t5')">5. Ping (ICMP)</a></li>
+                    <li><a href="#t6" onclick="toggle('t6')">6. ARP Protocol</a></li>
+                    <li><a href="#t7" onclick="toggle('t7')">7. Ports</a></li>
                 </ul>
             </nav>
+
             <section class="content">
-                <details class="top">
-                    <summary id="intro">Network</summary>
-                    <p >This is the Introduction</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+
+                <div class="learning-path">
+                    <img src="../images/pre-security.png" alt="" class="path-logo">
+                    <h2>Learning Path: Pre&nbsp;Security</h2>
+                </div>
+
+                <details>
+                    <summary id="t1">Task 1 - What is Networking ?</summary>
+                    <p>Networks are simply things connected. For example, your friendship circle: you are all connected because of similar interests, hobbies, skills and sorts.</p><br>
+                    <p>Networks can be found in all walks of life:</p><br>
+                    <ul>
+                        <li>A city's public transportation system</li>
+                        <li>Infrastructure such as the national power grid for electricity</li>
+                        <li>Meeting and greeting your neighbours</li>
+                        <li>Postal systems for sending letters and parcels</li>
+                    </ul><br>
+                    <p>But more specifically, in computing, networking is the same idea, just dispersed to technological devices. Take your phone as an example; the reason that you have it is to access things. We'll cover how these devices communicate with each other and the rules that follow.</p><br>
+                    <p>In computing, a network can be formed by anywhere from 2 devices to billions. These devices include everything from your laptop and phone to security cameras, traffic lights and even farming!</p><br>
+                    <p>Networks are integrated into our everyday life. Be it gathering data for the weather, delivering electricity to homes or even determining who has the right of way at a road. Because networks are so embedded in the modern-day, networking is an essential concept to grasp in cybersecurity.</p><br>
+                    <p>Take the diagram below as an example, Alice, Bob and Jim have formed their network! We'll come onto this a bit later on.</p>
+                    <img src="../images/img1.png" alt="Alice, Bob and Jim sending messages to each other" style="display: block; max-width: 70%; margin: 0 auto;"><br>
+                    <hr>
+                    <label for="q1">What is the key term for devices that are connected together?</label><br>
+                    <input type="text" class="questions" id="q1" name="q1">
+                    <label class="lbl-answers" for="a1">Show Answer</label>
+                    <input type="checkbox" class="answers" id="a1" name="a1" style="visibility: hidden;">
+                    <span class="correct-answers">Correct answer: Network</span>
+                
                 </details>
                 
-                <details  class="top">
-                    <summary id="t1"> Task 1</summary>
-                    <p>Welcome to task 1</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                <details>
+                    <summary id="t2">Task 2 - What is the Internet ?</summary>
+                    <p>Now that we've learnt what a network is and how one is defined in computing (just devices connected), let's explore the Internet.</p><br>
+                    <p>The Internet is one giant network that consists of many, many small networks within itself. Using our example from the previous task, let's now imagine that Alice made some new friends named Zayn and Toby that she wants to introduce to Bob and Jim. The problem is that Alice is the only person who speaks the same language as Zayn and Toby. So Alice will have to be the messenger!</p><br>
+                    <img src="../images/img2.png" alt="" style="display: block; max-width: 70%; margin: 0 auto;"><br>
+                    <p>Because Alice can speak both languages, they can communicate to one another through Alice — forming a new network.</p><br>
+                    <p>The first iteration of the Internet was within the ARPANET project in the late 1960s. This project was funded by the United States Defence Department and was the first documented network in action. However, it wasn't until 1989 when the Internet as we know it was invented by Tim Berners-Lee by the creation of the World Wide Web (WWW). It wasn't until this point that the Internet wasn't used as a repository for storing and sharing information (like it is today).</p><br>
+                    <p>Let's relate Alice's network of friends to computing devices. The Internet looks like a much larger version of this sort of diagram:</p><br>
+                    <img src="../images/img3.png" alt="" style="display: block; max-width: 90%; margin: 0 auto;"><br>
+                    <p>As previously stated, the Internet is made up of many small networks all joined together.  These small networks are called private networks, where networks connecting these small networks are called public networks -- or the Internet!<br>So, to recap, a network can be one of two types:</p>
+                    <ul>
+                        <li>A private network</li>
+                        <li>A public network</li>
+                    </ul><br>
+                    <p>Devices will use a set of labels to identify themselves on a network, which we will come onto in the task below.</p><br>
+                    <hr>
+                    <label for="q2">Who invented the World Wide Web?</label><br>
+                    <input type="text" class="questions" id="q2" name="q2">
+                    <label class="lbl-answers" for="a2">Show Answer</label>
+                    <input type="checkbox" class="answers" id="a2" name="a2" style="visibility: hidden;">
+                    <span class="correct-answers">Correct answer: Tim Berners-Lee</span>
                 </details>
             
-                <details class="top">
-                    <summary id="t2" >Task 2</summary>
-                    <p>Welcome to task 2</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                <details>
+                    <summary id="t3" >Task 3 - Devices on a Network</summary>
+                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
+                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
+                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
                 </details>
             
-                <details class="top">
-                    <summary id="t3">Task 3</summary>
-                    <p>Welcome to task 3</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa odit corporis necessitatibus, amet delectus magnam sunt ullam obcaecati maiores debitis perspiciatis doloribus omnis corrupti expedita? Minima adipisci dolor itaque praesentium animi labore quod libero excepturi ipsa, quos minus corrupti incidunt iusto ratione. Magnam consequuntur commodi ducimus! Enim minima ab reiciendis id placeat ex molestiae nostrum exercitationem eum repudiandae consequuntur, sit molestias. Id, porro vel laudantium accusantium exercitationem a quia alias culpa minus rem. Iusto amet veritatis vel consequatur enim animi. Rem id quidem cupiditate vel ex alias in iste illo neque sed fugit, asperiores similique recusandae culpa unde accusantium soluta?</p>
+                <details>
+                    <summary id="t4" >Task 4 - LAN Technologies</summary>
+                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
+                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
+                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
                 </details>
-        <!-- <br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br> -->
+
+                <details>
+                    <summary id="t5" >Task 5 - Ping (ICMP)</summary>
+                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
+                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
+                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
+                </details>
+
+                <details>
+                    <summary id="t6" >Task 6 - ARP Protocol</summary>
+                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
+                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
+                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
+                </details>
+
+                <details>
+                    <summary id="t7" >Task 7 - Ports</summary>
+                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
+                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
+                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
+                </details>
             </section>
             
         </main>
-        <footer>&copy; Yassine Fares 2022 - Examen HTML/CSS</footer>
+        <footer>&copy; 2022 Examen HTML/CSS - Yassine Fares</footer>
     </div>
     
-    <script>
+     <script>
         // Fetch all the details element.
         const details = document.querySelectorAll("details");
 
@@ -125,32 +172,32 @@
 
     <script>
 
-        function changeIcon(x) {
-            x.classList.toggle("change");
+        function changeIcon() {
+            document.getElementById("hamburger-icon").classList.toggle("change");
             
-            // var leftPos = document.getElementById("hamburger-icon").style.left;
+            var widthSide = document.getElementById("sidebar").style.width;
 
-            // if (leftPos == '0px' || leftPos == ''){
-            //     openSide();
-            // } else {
-            //     closeSide();
-            // }
+            if (widthSide == '0px' || widthSide == ''){
+                openSide();
+            } else {
+                closeSide();
+            }
             
         }
 
         function toggle(item){
             document.getElementById(item).click();
-            closeSide();
+            
+            changeIcon();
+            
         }
 
         function openSide(){
-            document.getElementById("sidebar").style.width = "220px";
-            // document.getElementById("hamburger-icon").style.left = "220px";
+            document.getElementById("sidebar").style.width = "max-content";
         }
 
         function closeSide(){
-            document.getElementById("sidebar").style.width = "0";
-            // document.getElementById("hamburger-icon").style.left = "0";
+            document.getElementById("sidebar").style.width = "0px";
         }
 
     </script>
