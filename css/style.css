@@ -326,9 +326,17 @@ summary {
     font-weight: bold;
     margin: -.5em -.5em 0;
     padding: .5em;
-    color: #fac570;
     background-color: #0d1721;
     cursor: pointer;
+}
+
+summary::marker {
+    color: #fac570;
+}
+
+summary a {
+    text-decoration: none;
+    color: #fac570;
 }
 
 .correct-answers {
