@@ -51,8 +51,8 @@
                 <ul id="side-list">
                     <li><a href="#t1" onclick="toggle('t1')">1. What is Networking ?</a></li>
                     <li><a href="#t2" onclick="toggle('t2')">2. What is the Internet ?</a></li>
-                    <li><a href="#t3" onclick="toggle('t3')">3. Devices on a Network</a></li>
-                    <li><a href="#t4" onclick="toggle('t4')">4. LAN Technologies</a></li>
+                    <li><a href="#t3" onclick="toggle('t3')">3. Identify devices on a Network</a></li>
+                    <li><a href="#t4" onclick="toggle('t4')">4. LAN Topologies</a></li>
                     <li><a href="#t5" onclick="toggle('t5')">5. Ping (ICMP)</a></li>
                     <li><a href="#t6" onclick="toggle('t6')">6. ARP Protocol</a></li>
                     <li><a href="#t7" onclick="toggle('t7')">7. Ports</a></li>
@@ -63,89 +63,297 @@
 
                 <div class="learning-path">
                     <img src="../images/pre-security.png" alt="" class="path-logo">
-                    <h2>Learning Path: Pre&nbsp;Security</h2>
+                    <h2>Learning Path: Pre&nbsp;Security/NetworkFundamentals</h2>
                 </div>
 
-                <details>
+                <details open>
                     <summary id="t1">Task 1 - What is Networking ?</summary>
-                    <p>Networks are simply things connected. For example, your friendship circle: you are all connected because of similar interests, hobbies, skills and sorts.</p><br>
-                    <p>Networks can be found in all walks of life:</p><br>
+                    <p>Networks are simply things connected. For example, your friendship circle: you are all connected because of similar interests, hobbies, skills and sorts.</p>
+                    <p>Networks can be found in all walks of life:</p>
                     <ul>
                         <li>A city's public transportation system</li>
                         <li>Infrastructure such as the national power grid for electricity</li>
                         <li>Meeting and greeting your neighbours</li>
                         <li>Postal systems for sending letters and parcels</li>
-                    </ul><br>
-                    <p>But more specifically, in computing, networking is the same idea, just dispersed to technological devices. Take your phone as an example; the reason that you have it is to access things. We'll cover how these devices communicate with each other and the rules that follow.</p><br>
-                    <p>In computing, a network can be formed by anywhere from 2 devices to billions. These devices include everything from your laptop and phone to security cameras, traffic lights and even farming!</p><br>
-                    <p>Networks are integrated into our everyday life. Be it gathering data for the weather, delivering electricity to homes or even determining who has the right of way at a road. Because networks are so embedded in the modern-day, networking is an essential concept to grasp in cybersecurity.</p><br>
+                    </ul>
+                    <p>But more specifically, in computing, networking is the same idea, just dispersed to technological devices. Take your phone as an example; the reason that you have it is to access things. We'll cover how these devices communicate with each other and the rules that follow.</p>
+                    <p>In computing, a network can be formed by anywhere from 2 devices to billions. These devices include everything from your laptop and phone to security cameras, traffic lights and even farming!</p>
+                    <p>Networks are integrated into our everyday life. Be it gathering data for the weather, delivering electricity to homes or even determining who has the right of way at a road. Because networks are so embedded in the modern-day, networking is an essential concept to grasp in cybersecurity.</p>
                     <p>Take the diagram below as an example, Alice, Bob and Jim have formed their network! We'll come onto this a bit later on.</p>
                     <img src="../images/img1.png" alt="Alice, Bob and Jim sending messages to each other" style="display: block; max-width: 70%; margin: 0 auto;"><br>
                     <hr>
+                    <input type="checkbox" class="answers" id="answers-net-1" name="answers-net-1" style="visibility: hidden;">
+                    <label class="lbl-answers" for="answers-net-1">Show Answers</label><br>
+
                     <label for="q1">What is the key term for devices that are connected together?</label><br>
                     <input type="text" class="questions" id="q1" name="q1">
-                    <label class="lbl-answers" for="a1">Show Answer</label>
-                    <input type="checkbox" class="answers" id="a1" name="a1" style="visibility: hidden;">
                     <span class="correct-answers">Correct answer: Network</span>
                 
                 </details>
                 
                 <details>
                     <summary id="t2">Task 2 - What is the Internet ?</summary>
-                    <p>Now that we've learnt what a network is and how one is defined in computing (just devices connected), let's explore the Internet.</p><br>
-                    <p>The Internet is one giant network that consists of many, many small networks within itself. Using our example from the previous task, let's now imagine that Alice made some new friends named Zayn and Toby that she wants to introduce to Bob and Jim. The problem is that Alice is the only person who speaks the same language as Zayn and Toby. So Alice will have to be the messenger!</p><br>
-                    <img src="../images/img2.png" alt="" style="display: block; max-width: 70%; margin: 0 auto;"><br>
-                    <p>Because Alice can speak both languages, they can communicate to one another through Alice — forming a new network.</p><br>
-                    <p>The first iteration of the Internet was within the ARPANET project in the late 1960s. This project was funded by the United States Defence Department and was the first documented network in action. However, it wasn't until 1989 when the Internet as we know it was invented by Tim Berners-Lee by the creation of the World Wide Web (WWW). It wasn't until this point that the Internet wasn't used as a repository for storing and sharing information (like it is today).</p><br>
-                    <p>Let's relate Alice's network of friends to computing devices. The Internet looks like a much larger version of this sort of diagram:</p><br>
-                    <img src="../images/img3.png" alt="" style="display: block; max-width: 90%; margin: 0 auto;"><br>
+                    <p>Now that we've learnt what a network is and how one is defined in computing (just devices connected), let's explore the Internet.</p>
+                    <p>The Internet is one giant network that consists of many, many small networks within itself. Using our example from the previous task, let's now imagine that Alice made some new friends named Zayn and Toby that she wants to introduce to Bob and Jim. The problem is that Alice is the only person who speaks the same language as Zayn and Toby. So Alice will have to be the messenger!</p>
+                    <img src="../images/img2.png" alt="" style="display: block; max-width: 70%; margin: 0 auto;">
+                    <p>Because Alice can speak both languages, they can communicate to one another through Alice — forming a new network.</p>
+                    <p>The first iteration of the Internet was within the ARPANET project in the late 1960s. This project was funded by the United States Defence Department and was the first documented network in action. However, it wasn't until 1989 when the Internet as we know it was invented by Tim Berners-Lee by the creation of the World Wide Web (WWW). It wasn't until this point that the Internet wasn't used as a repository for storing and sharing information (like it is today).</p>
+                    <p>Let's relate Alice's network of friends to computing devices. The Internet looks like a much larger version of this sort of diagram:</p>
+                    <img src="../images/img3.png" alt="" style="display: block; max-width: 90%; margin: 0 auto;">
                     <p>As previously stated, the Internet is made up of many small networks all joined together.  These small networks are called private networks, where networks connecting these small networks are called public networks -- or the Internet!<br>So, to recap, a network can be one of two types:</p>
                     <ul>
                         <li>A private network</li>
                         <li>A public network</li>
-                    </ul><br>
-                    <p>Devices will use a set of labels to identify themselves on a network, which we will come onto in the task below.</p><br>
+                    </ul>
+                    <p>Devices will use a set of labels to identify themselves on a network, which we will come onto in the task below.</p>
                     <hr>
+                    <input type="checkbox" class="answers" id="answers-net-2" name="answers-net-2" style="visibility: hidden;">
+                    <label class="lbl-answers" for="answers-net-2">Show Answers</label><br>
+
                     <label for="q2">Who invented the World Wide Web?</label><br>
                     <input type="text" class="questions" id="q2" name="q2">
-                    <label class="lbl-answers" for="a2">Show Answer</label>
-                    <input type="checkbox" class="answers" id="a2" name="a2" style="visibility: hidden;">
                     <span class="correct-answers">Correct answer: Tim Berners-Lee</span>
                 </details>
             
                 <details>
-                    <summary id="t3" >Task 3 - Devices on a Network</summary>
-                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
-                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
-                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
+                    <summary id="t3" >Task 3 - Identify devices on a Network</summary>
+                    <p>To communicate and maintain order, devices must be both identifying and identifiable on a network. What use is it if you don't know whom you're talking to at the end of the day?</p>
+                    <p>Devices on a network are very similar to humans in the fact that we have two ways of being identified:</p>
+                    <ul>
+                        <li>Our Name</li>
+                        <li>Our Fingerprints</li>
+                    </ul>
+                    <p>Now we can change our name through deed poll, but we can't, however, change our fingerprints. Every human has an individual set of fingerprints which means that even if they change their name, there is still an identity behind it. Devices have the same thing: two means of identification, with one being permeable. These are:</p>
+                    <ul>
+                        <li>An IP Address</li>
+                        <li>A Media Access Control (MAC) Address -- think of this as being similar to a serial number.</li>
+                    </ul>
+                    <h3>IP Addresses</h3>
+                    <p>Briefly, an IP address (or Internet Protocol) address can be used as a way of identifying a host on a network for a period of time, where that IP address can then be associated with another device without the IP address changing. First, let's split up precisely what an IP address is in the diagram below:</p>
+                    <img src="../images/img4.png" alt="IP address Decimal Representation" style="display: block; margin-inline: auto; max-width: 70%;">
+                    <p>An IP address is a set of numbers that are divided into four octets. The value of each octet will summarise to be the IP address of the device on the network. This number is calculated through a technique known as IP addressing & subnetting, but that is for another day. What's important to understand here is that IP addresses can change from device to device but cannot be active simultaneously more than once within the same network.</p>
+                    <p>IP Addresses follow a set of standards known as protocols. These protocols are the backbone of networking and force many devices to communicate in the same language, which is something that we'll come onto another time. However, we should recall that devices can be on both a private and public network. Depending on where they are will determine what type of IP address they have: a public or private IP address.</p>
+                    <p>A public address is used to identify the device on the Internet, whereas a private address is used to identify a device amongst other devices. Take the table & screenshot below as an example. Here we have two devices on a private network:</p>
+                    <table>
+                        <tr>
+                            <th>Device Name</th>
+                            <th>IP Address</th>
+                            <th>IP Address Type</th>
+                        </tr>
+                        <tr>
+                            <td>DESKTOP-KJE57FD</td>
+                            <td>192.168.1.77</td>
+                            <td>Private</td>
+                        </tr>
+                        <tr>
+                            <td>DESKTOP-KJE57FD</td>
+                            <td>86.157.52.21</td>
+                            <td>Public</td>
+                        </tr>
+                        <tr>
+                            <td>CMNatic-PC</td>
+                            <td>192.168.1.74</td>
+                            <td>Private</td>
+                        </tr>
+                        <tr>
+                            <td>CMNatic-PC</td>
+                            <td>86.157.52.21</td>
+                            <td>Public</td>
+                        </tr>
+                    </table>
+                    <img src="../images/img5.png" alt="" style="display: block; margin-inline: auto; max-width: 80%;">
+                    <p>These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your Internet Service Provider (or ISP) at a monthly fee (your bill!)</p>
+                    <p>As more and more devices become connected, it is becoming increasingly harder to get a public address that isn't already in use. For example, Cisco, an industry giant in the world of networking, estimated that there would be approximately 50 billion devices connected on the Internet by the end of 2021. <a href="https://www.cisco.com/c/dam/en_us/about/ac79/docs/innov/IoT_IBSG_0411FINAL.pdf" target="_blank">(Cisco., 2021)</a>. Enter IP address versions. So far, we have only discussed one version of the Internet Protocol addressing scheme known as IPv4, which uses a numbering system of 2^32 IP addresses (4.29 billion) -- so you can see why there is such a shortage!</p>
+                    <p>IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackle this issue. Although it is seemingly more daunting, it boasts a few benefits:</p>
+                    <ul>
+                        <li>Supports up to 2^128 of IP addresses (340 trillion-plus), resolving the issues faced with IPv4</li>
+                        <li>More efficient due to new methodologies</li>
+                    </ul>
+                    <p>The screenshot below compares both an IPv6 and IPv4 address.</p>
+                    <img src="../images/img6.png" alt="" style="display: block; margin-inline: auto; max-width: 80%;">
+                    <h3>MAC Addresses</h3>
+                    <p>Devices on a network will all have a physical network interface, which is a microchip board found on the device's motherboard. This network interface is assigned a unique address at the factory it was built at, called a MAC (Media Access Control ) address. The MAC address is a twelve-character hexadecimal number (a base sixteen numbering system used in computing to represent numbers) split into two's and separated by a colon. These colons are considered separators. For example, a4:c3:f0:85:ac:2d. The first six characters represent the company that made the network interface, and the last six is a unique number.</p>
+                    <img src="../images/img7.png" alt="" style="display: block; margin-inline: auto; max-width: 80%;">
+                    <p>However, an interesting thing with MAC addresses is that they can be faked or "spoofed" in a process known as spoofing. This spoofing occurs when a networked device pretends to identify as another using its MAC address. When this occurs, it can often break poorly implemented security designs that assume that devices talking on a network are trustworthy. Take the following scenario: A firewall is configured to allow any communication going to and from the MAC address of the administrator. If a device were to pretend or "spoof" this MAC address, the firewall would now think that it is receiving communication from the administrator when it isn't.</p>
+                    <hr>
+                    <input type="checkbox" class="answers" id="answers-net-3" name="answers-net-3" style="visibility: hidden;">
+                    <label class="lbl-answers" for="answers-net-3">Show Answers</label><br>
+
+                    <label for="q3">What does the term "IP" stand for?</label><br>
+                    <input type="text" class="questions" id="q3" name="q3">
+                    <span class="correct-answers">Correct answer: Internet Protocol</span><br>
+
+                    <label for="q4">What is each section of an IP address called?</label><br>
+                    <input type="text" class="questions" id="q4" name="q4">
+                    <span class="correct-answers">Correct answer: Octet</span><br>
+
+                    <label for="q5">How many sections (in digits) does an IP address have?</label><br>
+                    <input type="text" class="questions" id="q5" name="q5">
+                    <span class="correct-answers">Correct answer: 4</span><br>
+
+                    <label for="q6">What does the term "MAC" stand for?</label><br>
+                    <input type="text" class="questions" id="q6" name="q6">
+                    <span class="correct-answers">Correct answer: Media Access Control</span>
                 </details>
             
                 <details>
-                    <summary id="t4" >Task 4 - LAN Technologies</summary>
-                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
-                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
-                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
+                    <summary id="t4" >Task 4 - LAN Topologies</summary>
+                    <p>Over the years, there has been experimentation and implementation of various network designs.  In reference to networking, when we refer to the term "topology", we are actually referring to the design or look of the network at hand. Let's discuss the advantages and disadvantages of these topologies below.</p>
+                    <h3>Star Topology</h3>
+                    <p>The main premise of a star topology is that devices are individually connected via a central networking device such as a switch or hub. This topology is the most commonly found today because of its reliability and scalability - despite the cost.</p>
+                    <p>Any information sent to a device in this topology is sent via the central device to which it connects. Let's explore some of these advantages and disadvantages of this topology below:</p>
+                    <p>Because more cabling & the purchase of dedicated networking equipment is required for this topology, it is more expensive than any of the other topologies. However, despite the added cost, this does provide some significant advantages. For example, this topology is much more scalable in nature, which means that it is very easy to add more devices as the demand for the network increases.</p>
+                    <p>Unfortunately, the more the network scales, the more maintenance is required to keep the network functional. This increased dependence on maintenance can also make troubleshooting faults much harder. Furthermore, the star topology is still prone to failure - albeit reduced. For example, if the centralised hardware that connects devices fails, these devices will no longer be able to send or receive data. Thankfully, these centralised hardware devices are often robust.</p>
+                    <img src="../images/img8.png" alt="" style="display: block; margin-inline: auto; max-width: 80%;">
+                    <h3>Bus Topology</h3>
+                    <p>This type of connection relies upon a single connection which is known as a backbone cable. This type of topology is similar to the leaf off of a tree in the sense that devices (leaves) stem from where the branches are on this cable. Because all data destined for each device travels along the same cable, it is very quickly prone to becoming slow and bottlenecked if devices within the topology are simultaneously requesting data. This bottleneck also results in very difficult troubleshooting because it quickly becomes difficult to identify which device is experiencing issues with data all travelling along the same route.</p>
+                    <p>However, with this said, bus topologies are one of the easier and more cost-efficient topologies to set up because of their expenses, such as cabling or dedicated networking equipment used to connect these devices.</p>
+                    <p>Lastly, another disadvantage of the bus topology is that there is little redundancy in place in case of failures. This disadvantage is because there is a single point of failure along the backbone cable. If this cable were to break, devices can no longer receive or transmit data along the bus.</p>
+                    <img src="../images/img9.png" alt="" style="display: block; margin-inline: auto; max-width: 80%;">
+                    <h3>Ring Topology</h3>
+                    <p>The ring topology (also known as token topology) boasts some similarities. Devices such as computers are connected directly to each other to form a loop, meaning that there is little cabling required and less dependence on dedicated hardware such as within a star topology. </p>
+                    <p>A ring topology works by sending data across the loop until it reaches the destined device, using other devices along the loop to forward the data. Interestingly, a device will only send received data from another device in this topology if it does not have any to send itself. If the device happens to have data to send, it will send its own data first before sending data from another device.</p>
+                    <p>Because there is only one direction for data to travel across this topology, it is fairly easy to troubleshoot any faults that arise. However, this is a double-edged sword because it isn't an efficient way of data travelling across a network, as it may have to visit many multiple devices first before reaching the intended device.</p>
+                    <p>Lastly, ring topologies are less prone to bottlenecks, such as within a bus topology, as large amounts of traffic are not travelling across the network at any one time. The design of this topology does, however, mean that a fault such as cut cable, or broken device will result in the entire networking breaking. </p>
+                    <img src="../images/img10.png" alt="" style="display: block; margin-inline: auto; max-width: 80%;">
+                    <h3>What is a Switch?</h3>
+                    <p>Switches are dedicated devices within a network that are designed to aggregate multiple other devices such as computers, printers, or any other networking-capable device using ethernet. These various devices plug into a switch's port. Switches are usually found in larger networks such as businesses, schools, or similar-sized networks, where there are many devices to connect to the network. Switches can connect a large number of devices by having ports of 4, 8, 16, 24, 32, and 64 for devices to plug into.</p>
+                    <p>Switches are much more efficient than their lesser counterpart (hubs/repeaters). Switches keep track of what device is connected to which port. This way, when they receive a packet, instead of repeating that packet to every port like a hub would do, it just sends it to the intended target, thus reducing network traffic.</p>
+                    <img src="../images/img11.png" alt="" style="display: block; margin-inline: auto; max-width: 90%;">
+                    <p>Both Switches and Routers can be connected to one another. The ability to do this increases the redundancy (the reliability) of a network by adding multiple paths for data to take. If one path goes down, another can be used. Whilst this may reduce the overall performance of a network because packets have to take longer to travel, there is no downtime -- a small price to pay considering the alternative.</p>
+                    <h3>What is a Router?</h3>
+                    <p>It's a router's job to connect networks and pass data between them. It does this by using routing (hence the name router!).</p>
+                    <p>Routing is the label given to the process of data travelling across networks. Routing involves creating a path between networks so that this data can be successfully delivered.</p>
+                    <p>Routing is useful when devices are connected by many paths, such as in the example diagram below.</p>
+                    <img src="../images/img12.png" alt="" style="display: block; margin-inline: auto; max-width: 80%;">
+                    <hr>
+                    <input type="checkbox" class="answers" id="answers-net-4" name="answers-net-4" style="visibility: hidden;">
+                    <label class="lbl-answers" for="answers-net-4">Show Answers</label><br>
+
+                    <label for="q7">What does LAN stand for?</label><br>
+                    <input type="text" class="questions" id="q7" name="q7">
+                    <span class="correct-answers">Correct answer: Local Area Network</span><br>
+
+                    <label for="q8">What is the verb given to the job that Routers perform?</label><br>
+                    <input type="text" class="questions" id="q8" name="q8">
+                    <span class="correct-answers">Correct answer: Routing</span><br>
+
+                    <label for="q9">What device is used to centrally connect multiple devices on the local network and transmit data to the correct location?</label><br>
+                    <input type="text" class="questions" id="q9" name="q9">
+                    <span class="correct-answers">Correct answer: Switch</span><br>
+
+                    <label for="q10">What topology is cost-efficient to set up?</label><br>
+                    <input type="text" class="questions" id="q10" name="q10">
+                    <span class="correct-answers">Correct answer: Bus Topology</span><br>
+
+                    <label for="q10">What topology is expensive to set up and maintain?</label><br>
+                    <input type="text" class="questions" id="q10" name="q10">
+                    <span class="correct-answers">Correct answer: Star Topology</span>
                 </details>
 
                 <details>
                     <summary id="t5" >Task 5 - Ping (ICMP)</summary>
-                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
-                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
-                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
+                    <p>Ping is one of the most fundamental network tools available to us. Ping uses ICMP (Internet Control Message Protocol) packets to determine the performance of a connection between devices, for example, if the connection exists or is reliable.</p>
+                    <p>The time taken for ICMP packets travelling between devices is measured by ping, such as in the screenshot below. This measuring is done using ICMP's echo packet and then ICMP's echo reply from the target device.</p>
+                    <p>Pings can be performed against devices on a network, such as your home network or resources like websites. This tool can be easily used and comes installed on Operating Systems (OSs) such as Linux and Windows. The syntax to do a simple ping is "ping IP address or website URL". Let's see this in action in the screenshot below.</p>
+                    <img src="../images/img13.png" alt="" style="display: block; max-width: 80%; margin-inline: auto;">
+                    <p>Here we are pinging a device that has the private address of 192.168.1.254. Ping informs us that we have sent six ICMP packets, all of which were received with an average time of 5.3 seconds.</p>
+                    <hr>
+                    <input type="checkbox" class="answers" id="answers-net-5" name="answers-net-5" style="visibility: hidden;">
+                    <label class="lbl-answers" for="answers-net-5">Show Answers</label><br>
+
+                    <label for="q11">What protocol does ping use?</label><br>
+                    <input type="text" class="questions" id="q11" name="q11">
+                    <span class="correct-answers">Correct answer: ICMP</span><br>
+
+                    <label for="q12">What is the syntax to ping 10.10.10.10?</label><br>
+                    <input type="text" class="questions" id="q12" name="q12">
+                    <span class="correct-answers">Correct answer: ping 10.10.10.10</span>
                 </details>
 
                 <details>
                     <summary id="t6" >Task 6 - ARP Protocol</summary>
-                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
-                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
-                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
+                    <p>Recalling from our previous tasks that devices can have two identifiers: A MAC address and an IP address, the ARP protocol or Address Resolution Protocol for short, is the technology that is responsible for allowing devices to identify themselves on a network.</p>
+                    <p>Simply, the ARP protocol allows a device to associate its MAC address with an IP address on the network. Each device on a network will keep a log of the MAC addresses associated with other devices.</p>
+                    <p>When devices wish to communicate with another, they will send a broadcast to the entire network searching for the specific device. Devices can use the ARP protocol to find the MAC address (and therefore the physical identifier) of a device for communication.</p>
+                    <h3>How does ARP Work?</h3>
+                    <p>Each device within a network has a ledger to store information on, which is called a cache. In the context of the ARP protocol, this cache stores the identifiers of other devices on the network.</p>
+                    <p>In order to map these two identifiers together (IP address and MAC address), the ARP protocol sends two types of messages:</p>
+                    <ul>
+                        <li>ARP Request</li>
+                        <li>ARP Reply</li>
+                    </ul>
+                    <p>When an ARP request is sent, a message is broadcasted to every other device found on a network by the device, asking whether or not the device's MAC address matches the requested IP address. If the device does have the requested IP address, an ARP reply is returned to the initial device to acknowledge this. The initial device will now remember this and store it within its cache (an ARP entry). </p>
+                    <p>This process is illustrated in the diagram below:</p>
+                    <img src="../images/img14.png" alt="" style="display: block; max-width: 80%; margin-inline: auto;">
+                    <hr>
+                    <input type="checkbox" class="answers" id="answers-net-6" name="answers-net-6" style="visibility: hidden;">
+                    <label class="lbl-answers" for="answers-net-6">Show Answers</label><br>
+
+                    <label for="q13">What does ARP stand for?</label><br>
+                    <input type="text" class="questions" id="q13" name="q13">
+                    <span class="correct-answers">Correct answer: Address Resolution Protocol</span><br>
+
+                    <label for="q14">What category of ARP Packet asks a device whether or not it has a specific IP address?</label><br>
+                    <input type="text" class="questions" id="q14" name="q14">
+                    <span class="correct-answers">Correct answer: ARP Request</span><br>
+
+                    <label for="q15">What address is used as a physical identifier for a device on a network?</label><br>
+                    <input type="text" class="questions" id="q15" name="q15">
+                    <span class="correct-answers">Correct answer: MAC Address</span><br>
+
+                    <label for="q16">What address is used as a logical identifier for a device on a network?</label><br>
+                    <input type="text" class="questions" id="q16" name="q16">
+                    <span class="correct-answers">Correct answer: IP Address</span>
                 </details>
 
                 <details>
                     <summary id="t7" >Task 7 - Ports</summary>
-                    <img src="../images/roadmap.png" alt="Learning paths roadmap"><br>
-                    <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p><br>
-                    <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
+                    <p>Perhaps aptly titled by their name, ports are an essential point in which data can be exchanged. Think of a harbour and port. Ships wishing to dock at the harbour will have to go to a port compatible with the dimensions and the facilities located on the ship. When the ship lines up, it will connect to a port at the harbour. Take, for instance, that a cruise liner cannot dock at a port made for a fishing vessel and vice versa.</p>
+                    <p>These ports enforce what can park and where — if it isn't compatible, it cannot park here. Networking devices also use ports to enforce strict rules when communicating with one another. When a connection has been established (recalling from the OSI model's room), any data sent or received by a device will be sent through these ports. In computing, ports are a numerical value between 0 and 65535 (65,535).</p>
+                    <p>Because ports can range from anywhere between 0-65535, there quickly runs the risk of losing track of what application is using what port. A busy harbour is chaos! Thankfully, we associate applications, software and behaviours with a standard set of rules. For example, by enforcing that any web browser data is sent over port 80, software developers can design a web browser such as Google Chrome or Firefox to interpret the data the same way as one another.</p>
+                    <p>This means that all web browsers now share one common rule: data is sent over port 80. How the browsers look, feel and easy to use is up to the designer or the user's decision.</p>
+                    <p>While the standard rule for web data is port 80, a few other protocols have been allocated a standard rule. Any port that is within 0 and 1024 (1,024) is known as a common port. Let's explore some of these other protocols below:</p>
+                    <table>
+                        <tr>
+                            <th>Protocol</th>
+                            <th>Port Number</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>File Transfer Protocol (FTP)</td>
+                            <td>21</td>
+                            <td>This protocol is used by a file-sharing application built on a client-server model, meaning you can download files from a central location.</td>
+                        </tr>
+                        <tr>
+                            <td>Secure Shell (SSH)</td>
+                            <td>22</td>
+                            <td>This protocol is used to securely login to systems via a text-based interface for management.</td>
+                        </tr>
+                        <tr>
+                            <td>HyperText Transfer Protocol (HTTP)</td>
+                            <td>80</td>
+                            <td>This protocol powers the World Wide Web (WWW)! Your browser uses this to download text, images and videos of web pages.</td>
+                        </tr>
+                        <tr>
+                            <td>HyperText Transfer Protocol Secure (HTTPS)</td>
+                            <td>443</td>
+                            <td>This protocol does the exact same as above; however, securely using encryption.</td>
+                        </tr>
+                        <tr>
+                            <td>Server Message Block (SMB)</td>
+                            <td>445</td>
+                            <td>This protocol is similar to the File Transfer Protocol (FTP); however, as well as files, SMB allows you to share devices like printers.</td>
+                        </tr>
+                        <tr>
+                            <td>Remote Desktop Protocol (RDP)</td>
+                            <td>3389</td>
+                            <td>This protocol is a secure means of logging in to a system using a visual desktop interface (as opposed to the text-based limitations of the SSH protocol).</td>
+                        </tr>
+                    </table>
+                    <p>We have only briefly covered the more common protocols in cybersecurity. You can <a href="http://www.vmaxx.net/techinfo/ports.htm" target="_blank">find a table of the 1024 common ports listed</a> for more information.</p>
+                    <p>What is worth noting here is that these protocols only follow the standards. I.e. you can administer applications that interact with these protocols on a different port other than what is the standard (running a web server on 8080 instead of the 80 standard port). Note, however, applications will presume that the standard is being followed, so you will have to provide a colon (:) along with the port number.</p>
+
                 </details>
             </section>
             
