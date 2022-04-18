@@ -258,12 +258,14 @@ main {
 }
 
 .learning-path {
+    background-color: #38444d;
+    padding: 8px 0;
+}
+
+.learning-path-head {
     display: flex;
     align-items: center;
     gap: 16px;
-    background-color: #38444d;
-    margin-bottom: 40px;
-    padding: 8px 0;
 }
 
 .learning-path h2 {
@@ -277,7 +279,104 @@ main {
 }
 
 .learning-path p {
-    max-width: 60ch;
+    max-width: 90%;
+    margin: 8px auto;
+    color: #f1f1f1;
+}
+
+.learning-cards { 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-block: 40px;
+}
+
+.card {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: .8rem;
+    border: 1px solid #ffffff28;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0 #dce1eb;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card-head {
+    height: 200px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card h3 {
+    position: absolute;
+    top: 160px;
+    padding: 10px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+}
+
+h3.bg-green {
+    background-color: #8aad2e;
+}
+
+h3.bg-blue {
+    background-color: #335ca0;
+}
+
+h3.bg-red {
+    background-color: #a72f2f;
+}
+
+.card-body {
+    background-color: #f1f1f1;
+    color: #000;
+    padding: 24px 12px;
+}
+
+.card-body p {
+    text-align: center;
+}
+
+.card-body ul {
+    margin-top: 12px;
+    margin-left: 24px;
+}
+
+.card-foot {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+}
+
+.learning-time {
+    background-color: #e6e6e6ad;
+    color: #6d6d6d;
+    padding: 5px 15px;
+}
+
+.difficulty {
+    padding: 5px 15px;
+}
+
+.card .easy {
+    color: #83ad3d;
+    background-color: #96f4042e;
+}
+
+.card .intermediate {
+    color: #f09634;
+    background-color: #ffaf002e;
 }
 
 details {
