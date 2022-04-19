@@ -8,7 +8,9 @@
 
 /* RESET CSS */
 
-*{
+*,
+*::before,
+*::after{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -473,6 +475,96 @@ details table {
 details th, details td {
     border-bottom: 1px solid var(--content-txt-clr);
     border-right: 1px solid var(--content-txt-clr);;
+}
+
+.contact-block{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 60px;
+}
+
+.left-contact {
+    background-image: linear-gradient(to right bottom, #fb9a00, #fba62b, #fab044, #fabb5a, #fac570);
+    padding: 35px 40px;
+    border-radius: 10px;
+}
+
+.left-contact h2 {
+    color: #1d2a35;
+    margin-bottom: 20px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form label {
+    display: none;
+}
+
+.form-input {
+    border: none;
+    color: #1d2a35;
+    border-bottom: 1px solid #f1f1f1;
+    background: transparent;
+    padding-bottom: 12px;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.form-input::placeholder {
+    color: #1d2a35;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #1d2a35;
+}
+
+.submit-btn {
+    width: fit-content;
+    padding: 10px 20px;
+    margin-inline: auto;
+    background-color: #1d2a35;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.submit-btn:hover {
+    color: #f09634;
+    cursor: pointer;
+}
+
+.right-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 340px;
+    padding: 35px 40px;
+    background-color: #dadada;
+    color: #1d2a35;
+    font-size: .9rem;
+    border-radius: 10px;
+}
+
+.right-contact h2 {
+    font-size: 1.5rem;
+}
+
+.right-contact img {
+    width: 30px;
+}
+
+.address, .email, .phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
 }
 
 /* END OF CONTENT */
