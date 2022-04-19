@@ -16,7 +16,7 @@
                 <source src="../medias/video-back.mp4" type="video/mp4">
                 <source src="../medias/video-back.webm" type="video/webm">
             </video>
-            <h1>Learn CyberSecurity From Scratch</h1>
+            <h1>CyberSecurity101</h1>
         </header>
         <nav class="navbar">
             <div id="hamburger-icon" onclick="changeIcon()">
@@ -32,12 +32,9 @@
                     <ul class="courses-list">
                         <li><a href="./introduction.html">Introduction</a></li>
                         <li><a href="./network.html">Network Fundamentals</a></li>
-                        <li><a href="./web.html">How The Web Works</a></li>
-                        <li><a href="./linux.html">Linux Fundamentals</a></li>
-                        <li><a href="./windows.html">Windows Fundamentals</a></li>
                     </ul>
                 </li>
-                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="#">ABOUT</a></li>
                 <li><a href="./contact.html">CONTACT</a></li>
             </ul>   
             
@@ -385,9 +382,9 @@
         function changeIcon() {
             document.getElementById("hamburger-icon").classList.toggle("change");
             
-            var widthSide = document.getElementById("sidebar").style.width;
+            var maxWidthSide = document.getElementById("sidebar").style.maxWidth;
 
-            if (widthSide == '0px' || widthSide == ''){
+            if (maxWidthSide == '0px' || maxWidthSide == ''){
                 openSide();
             } else {
                 closeSide();
@@ -403,11 +400,11 @@
         }
 
         function openSide(){
-            document.getElementById("sidebar").style.width = "max-content";
+            document.getElementById("sidebar").style.maxWidth = "500px";
         }
 
         function closeSide(){
-            document.getElementById("sidebar").style.width = "0px";
+            document.getElementById("sidebar").style.maxWidth = "0px";
         }
 
     </script>
