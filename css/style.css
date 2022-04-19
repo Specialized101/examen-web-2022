@@ -482,12 +482,13 @@ details th, details td {
     flex-flow: row wrap;
     justify-content: center;
     margin: 60px;
+    gap: 8px;
 }
 
 .left-contact {
     background-image: linear-gradient(to right bottom, #fb9a00, #fba62b, #fab044, #fabb5a, #fac570);
     padding: 35px 40px;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .left-contact h2 {
@@ -549,7 +550,7 @@ details th, details td {
     background-color: #dadada;
     color: #1d2a35;
     font-size: .9rem;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .right-contact h2 {
