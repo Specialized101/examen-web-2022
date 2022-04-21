@@ -125,7 +125,7 @@ header h1 {
 .nav-links {
     display: flex;
     list-style-type: none;
-    margin-right: 50px;
+    padding-right: 50px;
     
 }
 
