@@ -106,6 +106,17 @@ header h1 {
     box-shadow: 0 0 4px white;
 }
 
+.logo-link, .medaillon-link {
+    text-decoration: none;
+    transition: transform 300ms;
+    
+}
+
+.logo-link:hover,
+.medaillon-link:hover {
+    transform: scale(1.05);
+}
+
 /* END OF HEADER */
 /* ******************************************************************* */
 /*
@@ -310,7 +321,7 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    font-size: .8rem;
+    font-size: 12.8px;
     border: 1px solid #ffffff28;
     border-radius: 10px;
     box-shadow: 0 1px 5px var(--content-txt-clr);
