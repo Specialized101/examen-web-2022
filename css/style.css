@@ -642,6 +642,14 @@ footer {
         width: 90%;
     }
 
+    details table {
+        width: 95%;
+    }
+
+    #scroll-top-btn {
+        opacity: .5;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
