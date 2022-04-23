@@ -357,12 +357,34 @@
                     <p>What is worth noting here is that these protocols only follow the standards. I.e. you can administer applications that interact with these protocols on a different port other than what is the standard (running a web server on 8080 instead of the 80 standard port). Note, however, applications will presume that the standard is being followed, so you will have to provide a colon (:) along with the port number.</p>
 
                 </details>
+                
+                <button onclick="topFunction()"><img src="../images/scrolltop.png" alt="" id="scroll-top-btn"></a>
             </section>
-            
         </main>
+        
+
         <footer>&copy; 2022 Examen HTML/CSS - Yassine Fares</footer>
     </div>
     
+    <script>
+        var myButton = document.getElementById("scroll-top-btn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250){
+                myButton.style.bottom = "50px";
+            } else {
+                myButton.style.bottom = "-150px";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
      <script>
         // Fetch all the details element.
         const details = document.querySelectorAll("details");

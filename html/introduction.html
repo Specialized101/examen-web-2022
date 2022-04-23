@@ -85,13 +85,33 @@
                     <p>Above is a learning path roadmap. The Pre Security path will teach you the technical knowledge you need to get started in cyber security. Once you understand the basics, enroll in either the Offensive Pentesting (ethically hacking systems) or the Cyber Defense (investigating attacks and defending systems) path.</p>
                     <p>The skills you acquire from the learning paths will prepare you for a career as an ethical hacker, penetration tester or cyber security analyst.</p>
                 </details>
-            
+
+                <button onclick="topFunction()"><img src="../images/scrolltop.png" alt="" id="scroll-top-btn"></a>
             </section>
             
         </main>
         <footer>&copy; 2022 Examen HTML/CSS - Yassine Fares</footer>
     </div>
     
+    <script>
+        var myButton = document.getElementById("scroll-top-btn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250){
+                myButton.style.bottom = "50px";
+            } else {
+                myButton.style.bottom = "-150px";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
      <script>
         // Fetch all the details element.
         const details = document.querySelectorAll("details");
