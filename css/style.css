@@ -332,13 +332,14 @@ main {
 
 .card {
     width: 350px;
+    height: 390px;
     display: flex;
     flex-direction: column;
     position: relative;
     font-size: 12.8px;
     border: 1px solid #ffffff28;
     border-radius: 10px;
-    box-shadow: 0 1px 5px var(--content-txt-clr);
+    box-shadow: 0 0px 4px var(--content-txt-clr);
     overflow: hidden;
     transition: all 200ms ease-in-out;
 }

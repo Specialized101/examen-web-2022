@@ -86,6 +86,7 @@
                         </div>
                     </div>
                 </div>
+                <img src="../images/scrolltop.png" alt="" id="scroll-top-btn" onclick="topFunction()">
 
             </section>
 
@@ -93,5 +94,24 @@
         <footer>&copy; Yassine Fares 2022 - Examen HTML/CSS</footer>
     </div>
     
+    <script>
+        var myButton = document.getElementById("scroll-top-btn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250){
+                myButton.style.bottom = "50px";
+            } else {
+                myButton.style.bottom = "-150px";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
 </body>
 </html>
