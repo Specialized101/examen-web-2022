@@ -472,6 +472,10 @@ summary::marker {
     color: #fac570;
 }
 
+summary::-webkit-details-marker {
+    color: #fac570;
+  }
+
 summary a {
     text-decoration: none;
     color: #fac570;
