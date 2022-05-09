@@ -1,11 +1,24 @@
-/* Table of Content */
+/*      Table of Content
+* ******************************
+* 1.FONT IMPORTS 
+* 2.RESET CSS
+* 3.GLOBAL CONFIG
+* 4.START OF HEADER
+* 5.START OF NAVIGATION BAR
+* 6.START OF MAIN
+*   6.1START OF SIDEBAR NAVIGATION
+*   6.2START OF CONTENT
+* 7.START OF FOOTER
+* 8.START OF MEDIA QUERIES
+* ******************************
+*/
 
 
-/* FONT IMPORTS */
+/* 1.FONT IMPORTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
 
-/* RESET CSS */
+/* 2.RESET CSS */
 
 *,
 *::before,
@@ -14,6 +27,8 @@
     padding: 0;
     margin: 0;
 }
+
+/* 3.GLOBAL CONFIG */
 
 :root {
     --content-bg-clr: #e1e1e1;
@@ -37,7 +52,6 @@ body {
     font-family: 'Red Hat Mono', monospace;
 }
 .container {
-    /* min-height: 100vh; */
     display: grid;
     grid-template-columns: 220px 1fr;
     grid-template-rows: 200px 32px 1fr 30px;
@@ -83,7 +97,7 @@ body {
     transform: scale(1.1);
 }
 
-/* START OF HEADER */
+/* 4.START OF HEADER */
 
 header {
     grid-area: header;
@@ -131,11 +145,11 @@ header h1 {
     transform: scale(1.05);
 }
 
-/* END OF HEADER */
+/* 4.1END OF HEADER */
 /* ******************************************************************* */
 /*
 /* ******************************************************************* */
-/* START OF NAVIGATION BAR */
+/* 5.START OF NAVIGATION BAR */
 
 .navbar {
     display: flex;
@@ -229,11 +243,11 @@ header h1 {
   }
 
 
-/* END OF NAVIGATION BAR */
+/* 5.1END OF NAVIGATION BAR */
 /* ******************************************************************* */
 /*
 /* ******************************************************************* */
-/* START OF MAIN */
+/* 6.START OF MAIN */
 
 main {
     grid-area: main;
@@ -243,7 +257,7 @@ main {
     grid-template-areas: "sidebar content";
 }
 
-/* START OF SIDEBAR NAVIGATION */
+/* 6.1START OF SIDEBAR NAVIGATION */
 
 .sidebar {
     max-width: 0;
@@ -277,18 +291,12 @@ main {
 }
 
 /* END OF SIDEBAR NAVIGATION */
-/* START OF CONTENT */
+/* 6.2START OF CONTENT */
 .content {
-    
-    /* margin: 0 auto; */
-    /* padding: 2em; */
     background-color: var(--content-bg-clr);
     color: var(--content-txt-clr);
     width: 100%;
     overflow: hidden;
-    /* height: 100%; */
-    /* border: 1px solid gold; */
-    /* margin: 1em auto; */
 }
 
 .learning-path {
@@ -611,7 +619,7 @@ details th, details td {
 /* ******************************************************************* */
 /*
 /* ******************************************************************* */
-/* START OF FOOTER */
+/* 7.START OF FOOTER */
 footer {
     display: flex;
     justify-content: center;
@@ -625,7 +633,7 @@ footer {
 /* ******************************************************************* */
 /*
 /* ******************************************************************* */
-/* START OF MEDIA QUERIES */
+/* 8.START OF MEDIA QUERIES */
 
 @media screen and (max-width: 900px){
     
